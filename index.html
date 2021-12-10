@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <title>Amigo Secreto Paglia!</title>
+    </head>
+    <body>
+        <script>
+            var path = window.location.pathname;
+            console.log(path)
+            console.log("hello")
+            // var text = httpGet("https://53hwihhlcj.execute-api.us-east-1.amazonaws.com/" + path);
+
+            // user = JSON.parse(text);
+            // document.body.innerHTML = "<h1>Olá " + user.Name + ", você tirou: " + user.Drawn + "</h1>"
+            document.body.innerHTML = "<h1>" + path + "</h1>"
+
+            function httpGet(theUrl)
+            {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+                xmlHttp.send( null );
+                return xmlHttp.responseText;
+            }
+
+        </script>
+    </body>
+</html>
